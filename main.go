@@ -91,7 +91,25 @@ var (
 <html>
 <head>
     <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
     <title>배송 안내</title>
+	<style>
+		body { 
+		  width: 100%; 
+		  height: 100%; 
+		} 
+		html { 
+		  width: 100%; 
+		  height: 100%; 
+		} 
+		h1 {
+		  font-weight: bold;
+		  font-size: 80px;
+		}
+		p {
+		  font-size: 40px;
+		}
+	</style>
 </head>
 
 <body>
@@ -101,7 +119,7 @@ var (
 <p>예) 101호의 경우, "101" 입력 후 "호출" 클릭</p>
 <p>호출 대기음이 들리면, 아래 버튼을 눌러주세요.</p>
 
-<input id="pressing_button" style="height:200px;width:200px" type="submit" value="호출 수락하기" onclick="submit()">
+<input id="pressing_button" style="height:90px;width:100%;font-size:40px;font-weight: bold;" type="submit" value="호출 수락하기" onclick="submit()">
 
 <script type="text/javascript">
     function submit() {
