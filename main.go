@@ -19,6 +19,7 @@ const (
 	deviceID  = "removed"
 	accessID  = "removed"
 	accessKey = "removed"
+	sentryDSN = "removed"
 
 	defaultPort = "8012"
 )
