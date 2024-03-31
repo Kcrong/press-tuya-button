@@ -2,6 +2,9 @@ package main
 
 import (
 	"fmt"
+	"net/http"
+	"os"
+
 	"github.com/getsentry/sentry-go"
 	sentrygin "github.com/getsentry/sentry-go/gin"
 	"github.com/gin-gonic/gin"
@@ -10,8 +13,6 @@ import (
 	"github.com/tuya/tuya-cloud-sdk-go/api/common"
 	"github.com/tuya/tuya-cloud-sdk-go/api/device"
 	"github.com/tuya/tuya-cloud-sdk-go/config"
-	"net/http"
-	"os"
 )
 
 const (
@@ -30,7 +31,7 @@ func main() {
 	)
 
 	if err := sentry.Init(sentry.ClientOptions{
-		Dsn:           "removed",
+		Dsn:           sentryDSN,
 		EnableTracing: true,
 		// Set TracesSampleRate to 1.0 to capture 100%
 		// of transactions for performance monitoring.
